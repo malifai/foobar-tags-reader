@@ -4,7 +4,7 @@ import { TrackInformation } from './models/track-information.model';
 
 const tagReader = new TagReader();
 
-fs.open('../testfiles/2.mp3', 'r', async (error: any, data: any) => {
+fs.open('src/assets/testfiles/2.mp3', 'r', async (error: any, data: any) => {
     if (error) {
         console.log(error.message);
         return;
