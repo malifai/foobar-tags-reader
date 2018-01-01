@@ -1,0 +1,10 @@
+{
+  "name": "foobar-tags-reader",
+  "version": "1.0.0",
+  "description": "foobar mp3 tags reader",
+  "main": "src/main.js",
+  "scripts": {
+  },
+  "author": "Alexander Sadri",
+  "license": "MIT"
+}
