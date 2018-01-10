@@ -1,6 +1,6 @@
 {
 	"name": "foobar-tags-reader",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "foobar mp3 tags reader",
 	"author": "Alexander Sadri <develop@alexsadri.com> (http://www.alexsadri.com)",
 	"license": "MIT",
