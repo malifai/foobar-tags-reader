@@ -4,6 +4,7 @@
 	"description": "foobar mp3 tags reader",
 	"author": "Alexander Sadri <develop@alexsadri.com> (http://www.alexsadri.com)",
 	"license": "MIT",
+	"main": "./src/main.js",
 	"keywords": [
 		"Foobar2000",
 		"mp3",
