@@ -11,5 +11,6 @@ export class CustomFrameName {
     static added_timestamp: string = 'addedTimestamp';
     static first_played_timestamp: string = 'firstPlayedTimestamp';
     static last_played_timestamp: string = 'lastPlayedTimestamp';
+    static rating: string = 'rating';
 
 }

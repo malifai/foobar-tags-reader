@@ -64,7 +64,6 @@ export class TagReader {
 
             tagDescription = tagName ? CustomFrameName[tagName] : CustomFrameName[frame.frameName];
             trackInfo.frames[tagDescription || frame.frameName] = frame;
-
         }
 
         return Promise.resolve(trackInfo);
@@ -118,12 +117,12 @@ export class TagReader {
     private _parseCharCodes(buffer: Buffer): { description: string, value: string} {
         let description: string = '';
         let value: string = '';
-        let hasZeroPaddings: boolean = this._hasZeroPaddings(buffer);
+        let hasZeroPads: boolean = this._hasZeroPads(buffer);
         let charCodes: number[] = buffer.toJSON().data;
         let charCodeBefore: number;
 
         charCodes.forEach((charCode: number) => {
-            if (!description && ((hasZeroPaddings && charCodeBefore === 0 && charCode === 0) || (!hasZeroPaddings && charCode === 0))) {
+            if (!description && ((hasZeroPads && charCodeBefore === 0 && charCode === 0) || (!hasZeroPads && charCode === 0))) {
                 description = value;
                 value = '';
             } else if (charCode >= 32 && charCode <=122) {
@@ -135,7 +134,7 @@ export class TagReader {
         return { description: description, value: value };
     }
 
-    private _hasZeroPaddings(buffer: Buffer): boolean {
+    private _hasZeroPads(buffer: Buffer): boolean {
         let hasZeroPaddings: boolean = false;
         let charCodeBefore: number;
 

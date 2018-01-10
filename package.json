@@ -1,10 +1,12 @@
 {
-  "name": "foobar-tags-reader",
-  "version": "1.0.0",
-  "description": "foobar mp3 tags reader",
-  "scripts": {
-	  "start": "node ./src/main.js"
-  },
-  "author": "Alexander Sadri",
-  "license": "MIT"
+	"name": "foobar-tags-reader",
+	"version": "0.0.1",
+	"description": "foobar mp3 tags reader",
+	"author": "Alexander Sadri <develop@alexsadri.com> (http://www.alexsadri.com)",
+	"license": "MIT",
+	"keywords": [
+		"Foobar2000",
+		"mp3",
+		"tag reader"
+	]
 }

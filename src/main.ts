@@ -2,14 +2,19 @@ import fs = require('fs');
 import { TagReader } from './tag-reader';
 import { TrackInformation } from './models/track-information.model';
 
-const tagReader = new TagReader();
+export function getTags(filePath: string): Promise<TrackInformation> {
+	return new Promise((resolve, reject) => {
+		fs.open(filePath, 'r', async (error: any, data: any) => {
+			if (error) {
+				reject(error.message);
+				return;
+			}
 
-fs.open('src/assets/testfiles/2.mp3', 'r', async (error: any, data: any) => {
-    if (error) {
-        console.log(error.message);
-        return;
-    }
 
-    let trackInformation: TrackInformation = await tagReader.read(data);
-    console.log(trackInformation);
-});
+			let tagReader = new TagReader();
+			let trackInformation: TrackInformation = await tagReader.read(data);
+
+			resolve(trackInformation);
+		});
+	});
+}
