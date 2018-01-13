@@ -9,5 +9,8 @@
 		"Foobar2000",
 		"mp3",
 		"tag reader"
-	]
+	],
+	"devDependencies": {
+		"@types/node": "^9.3.0"
+	}
 }

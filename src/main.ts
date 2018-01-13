@@ -10,9 +10,15 @@ export function getTags(filePath: string): Promise<TrackInformation> {
 				return;
 			}
 
-
 			let tagReader = new TagReader();
-			let trackInformation: TrackInformation = await tagReader.read(data);
+			let trackInformation: TrackInformation;
+
+			try {
+				trackInformation = await tagReader.read(data);
+			} catch (err) {
+				reject(err);
+				return;
+			}
 
 			resolve(trackInformation);
 		});

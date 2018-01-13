@@ -10,7 +10,7 @@ export class TagReader {
 
     async read(data: any): Promise<TrackInformation> {
         if (!data) {
-            Promise.reject('No data provided');
+            return Promise.reject('No data provided');
         }
 
         let trackInfo: TrackInformation = new TrackInformation();
@@ -19,6 +19,10 @@ export class TagReader {
 
         // Read Type
         trackInfo.header.type = await this._readChunk(3, 'string');
+
+        if (trackInfo.header.type !== 'ID3') {
+        	return Promise.reject('No ID3 Tag found');
+        }
 
         // Read Version
         trackInfo.header.version = await this._readChunk(1, 'int8');
