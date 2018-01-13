@@ -3,6 +3,10 @@
 	"version": "0.0.5",
 	"description": "foobar mp3 tags reader",
 	"author": "Alexander Sadri <develop@alexsadri.com> (http://www.alexsadri.com)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lexith/foobar-tags-reader.git"
+	},
 	"license": "MIT",
 	"main": "./src/main.js",
 	"keywords": [
