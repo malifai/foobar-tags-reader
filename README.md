@@ -14,7 +14,13 @@ getTags('/path/to/mp3').then((trackInformation: TrackInformation) => {
 );
 ```
 
+## Installation
+
+```
+npm install --save foobar-tags-rader
+```
+
 ## Notes
 
 This is basically a small helper package for another hobby project of mine. It's not considered to be used for any type of production apps. 
-Feel free to email me about any kind of feedback or hints to improve the tag reader.
+Feel free to contribute to this repo or email me about any kind of feedback or hints to improve the tag reader.
