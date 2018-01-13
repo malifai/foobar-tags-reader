@@ -67,7 +67,7 @@ export class TagReader {
             }
 
             tagDescription = tagName ? CustomFrameName[tagName] : CustomFrameName[frame.frameName];
-            trackInfo.frames[tagDescription || frame.frameName] = frame;
+            trackInfo.frames[tagDescription || tagName || frame.frameName] = frame;
         }
 
         return Promise.resolve(trackInfo);
